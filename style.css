@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "PT Sans", sans-serif;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.left {
+  width: 40%;
+  height: 100%;
+}
+.left .img {
+  width: 100%;
+  height: 100%;
+  background: #5861ba;
+}
+.left .img img {
+  width: 100%;
+  height: 100%;
+}
+.right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  width: 50%;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  padding-bottom: 0;
+}
+input {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 30px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #000;
+}
+input:focus {
+  border: 2px solid #5861ba;
+}
+input:invalid {
+  border: 2px solid #f03f3f;
+}
+.terms {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.terms input {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  margin-right: 20px;
+}
+#check {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+#radio {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #5861ba;
+  border-radius: 50%;
+  pointer-events: none;
+}
+#radio::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+}
+#check:checked + #radio:before {
+  background: #5861ba;
+}
+.terms label {
+  cursor: pointer;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.buttons button {
+  width: 49%;
+  padding: 1rem 2rem;
+  background: #5861ba;
+  color: #fff;
+  border: none;
+  box-shadow: 1px 7px 15px rgba(82, 93, 192, 0.55);
+  border-radius: 12px;
+  outline: none;
+}
+.buttons a {
+  text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 12px;
+  width: 49%;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.mark p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.links span {
+  font-size: 36px;
+  font-weight: 700;
+  color: #545454;
+}
+@media (max-width: 999px) {
+  form {
+    width: 70%;
+  }
+}
+@media (max-width: 600px) {
+  .left {
+    display: none;
+  }
+  .right {
+    width: 100%;
+    background: url(./Stuck\ at\ Home\ Sitting\ On\ Chair.svg) no-repeat center
+      center/ cover;
+  }
+  form {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+  }
+  h1,
+  .links span {
+    font-size: 24px;
+  }
+  .links img {
+    width: 20px;
+  }
+  .buttons button,
+  .buttons a {
+    padding: 0.8rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 400px) {
+  form {
+    width: 90%;
+  }
+}
